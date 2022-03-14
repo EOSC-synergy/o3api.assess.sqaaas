@@ -1,0 +1,51 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: feature/flake8
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/eosc-synergy/o3api:
+      repo: https://github.com/eosc-synergy/o3api
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/eosc-synergy/o3api git:
+        commands:
+        - /usr/bin/env sh .sqa/script.jumpy-bistre-discus.sh
+        container: qc.acc_scummy-linen-gopher
+  QC.Doc:
+    repos:
+      github.com/eosc-synergy/o3api find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.gimpy-beige-tzu.sh
+        container: qc.doc_snoopy-beige-leopard
+      github.com/eosc-synergy/o3api markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.stuffy-tan-seahorse.sh
+        container: qc.doc_paltry-blue-fly
+      github.com/eosc-synergy/o3api restructuredtext-lint:
+        commands:
+        - /usr/bin/env sh .sqa/script.stuffy-denim-octopus.sh
+        container: qc.doc_shaggy-aqua-caterpillar
+  QC.Lic:
+    repos:
+      github.com/eosc-synergy/o3api licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.snoopy-fuchsia-sloth.sh
+        container: qc.lic_wheezy-aqua-akbash
+  QC.Sec:
+    repos:
+      github.com/eosc-synergy/o3api bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.sleazy-asparagus-scorpion.sh
+        container: qc.sec_hasty-heliotrope-dugong
+  QC.Sty:
+    repos:
+      github.com/eosc-synergy/o3api flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.shaggy-amethyst-fish.sh
+        container: qc.sty_crabby-yellow-neanderthal
+timeout: 600
