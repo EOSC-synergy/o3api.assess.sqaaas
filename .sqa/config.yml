@@ -1,39 +1,39 @@
 config:
   credentials: []
   project_repos:
-    github.com/EOSC-synergy/o3api:
-      repo: https://github.com/EOSC-synergy/o3api
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.1.0
+      branch: staging
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/eosc-synergy/o3api:
+      repo: https://github.com/eosc-synergy/o3api
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/EOSC-synergy/o3api git:
+      github.com/eosc-synergy/o3api git:
         commands:
-        - /usr/bin/env sh .sqa/script.stuffy-ivory-tuatara.sh
-        container: qc.acc_trippy-aquamarine-fox
+        - /usr/bin/env sh .sqa/script.muggy-denim-numbat.sh
+        container: qc.acc_leaky-ivory-mammoth
   QC.Doc:
     repos:
-      github.com/EOSC-synergy/o3api find_doc_files.py:
+      github.com/eosc-synergy/o3api find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.hazy-buff-tortoise.sh
-        container: qc.doc_blurry-smalt-coati
-      github.com/EOSC-synergy/o3api markdownlint:
+        - /usr/bin/env sh .sqa/script.bluesy-chartreuse-camel.sh
+        container: qc.doc_cheeky-emerald-buzzard
+      github.com/eosc-synergy/o3api markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.boozy-indigo-squirt.sh
-        container: qc.doc_chewy-dandelion-lemur
-      github.com/EOSC-synergy/o3api restructuredtext-lint:
+        - /usr/bin/env sh .sqa/script.tacky-gamboge-affenpinscher.sh
+        container: qc.doc_freaky-carmine-dachshund
+      github.com/eosc-synergy/o3api restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.flimsy-charcoal-ferret.sh
-        container: qc.doc_smelly-wisteria-panda
+        - /usr/bin/env sh .sqa/script.squeaky-azure-antelope.sh
+        container: qc.doc_paltry-linen-kakapo
   QC.Lic:
     repos:
-      github.com/EOSC-synergy/o3api licensee:
+      github.com/eosc-synergy/o3api licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.sunny-teal-ostrich.sh
-        container: qc.lic_gimpy-amaranth-fossa
+        - /usr/bin/env sh .sqa/script.gummy-ochre-robin.sh
+        container: qc.lic_randy-orchid-booby
 timeout: 600
