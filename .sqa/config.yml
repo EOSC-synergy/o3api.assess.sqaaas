@@ -14,26 +14,26 @@ sqa_criteria:
     repos:
       github.com/EOSC-synergy/o3api git:
         commands:
-        - /usr/bin/env sh .sqa/script.randy-teal-hummingbird.sh
-        container: qc.acc_muggy-beige-barracuda
+        - /usr/bin/env sh .sqa/script.snazzy-malachite-blue.sh
+        container: qc.acc_ugly-white-quetzal
   QC.Doc:
     repos:
       github.com/EOSC-synergy/o3api find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.nerdy-chocolate-cockroach.sh
-        container: qc.doc_foggy-fuchsia-bullfrog
+        - /usr/bin/env sh .sqa/script.shaky-amaranth-skunk.sh
+        container: qc.doc_hasty-mauve-buffalo
       github.com/EOSC-synergy/o3api markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.muzzy-chocolate-serval.sh
-        container: qc.doc_foggy-silver-iguana
+        - /usr/bin/env sh .sqa/script.homely-malachite-goat.sh
+        container: qc.doc_craggy-grey-havanese
       github.com/EOSC-synergy/o3api restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.snippy-amber-cassowary.sh
-        container: qc.doc_lousy-saffron-stoat
+        - /usr/bin/env sh .sqa/script.squirrely-black-bloodhound.sh
+        container: qc.doc_woozy-lime-ocelot
   QC.Lic:
     repos:
       github.com/EOSC-synergy/o3api licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.pretty-cardinal-numbat.sh
-        container: qc.lic_shabby-mauve-squid
+        - /usr/bin/env sh .sqa/script.ready-lavender-uguisu.sh
+        container: qc.lic_paltry-lavender-robin
 timeout: 600
