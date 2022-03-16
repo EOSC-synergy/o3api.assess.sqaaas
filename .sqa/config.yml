@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: staging
+      branch: release/1.3.0
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/eosc-synergy/o3api:
       repo: https://github.com/eosc-synergy/o3api
@@ -14,26 +14,38 @@ sqa_criteria:
     repos:
       github.com/eosc-synergy/o3api git:
         commands:
-        - /usr/bin/env sh .sqa/script.muggy-denim-numbat.sh
-        container: qc.acc_leaky-ivory-mammoth
+        - /usr/bin/env sh .sqa/script.shabby-periwinkle-shrew.sh
+        container: qc.acc_ugly-platinum-capybara
   QC.Doc:
     repos:
       github.com/eosc-synergy/o3api find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.bluesy-chartreuse-camel.sh
-        container: qc.doc_cheeky-emerald-buzzard
+        - /usr/bin/env sh .sqa/script.zippy-saffron-husky.sh
+        container: qc.doc_chewy-charcoal-discus
       github.com/eosc-synergy/o3api markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.tacky-gamboge-affenpinscher.sh
-        container: qc.doc_freaky-carmine-dachshund
+        - /usr/bin/env sh .sqa/script.smelly-ecru-wallaby.sh
+        container: qc.doc_boozy-charcoal-giraffe
       github.com/eosc-synergy/o3api restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.squeaky-azure-antelope.sh
-        container: qc.doc_paltry-linen-kakapo
+        - /usr/bin/env sh .sqa/script.flabby-chocolate-uguisu.sh
+        container: qc.doc_woozy-amber-gibbon
   QC.Lic:
     repos:
       github.com/eosc-synergy/o3api licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.gummy-ochre-robin.sh
-        container: qc.lic_randy-orchid-booby
+        - /usr/bin/env sh .sqa/script.craggy-gold-squid.sh
+        container: qc.lic_trippy-cinnamon-cuttlefish
+  QC.Sec:
+    repos:
+      github.com/eosc-synergy/o3api bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.hilly-violet-jaguar.sh
+        container: qc.sec_sleazy-cinnamon-rat
+  QC.Sty:
+    repos:
+      github.com/eosc-synergy/o3api flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.hazy-cobalt-bobcat.sh
+        container: qc.sty_homely-cream-hare
 timeout: 600
