@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: 1.3.0-alpha
+      branch: release/1.1.0
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/eosc-synergy/o3api:
       repo: https://github.com/eosc-synergy/o3api
@@ -14,38 +14,26 @@ sqa_criteria:
     repos:
       github.com/eosc-synergy/o3api git:
         commands:
-        - /usr/bin/env sh .sqa/script.surly-cornflower-cichlid.sh
-        container: qc.acc_randy-firebrick-caterpillar
+        - /usr/bin/env sh .sqa/script.scaly-sepia-llama.sh
+        container: qc.acc_snippy-cardinal-penguin
   QC.Doc:
     repos:
       github.com/eosc-synergy/o3api find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.clammy-turquoise-spider.sh
-        container: qc.doc_tacky-charcoal-kangaroo
+        - /usr/bin/env sh .sqa/script.cheeky-turquoise-squirrel.sh
+        container: qc.doc_scanty-denim-mole
       github.com/eosc-synergy/o3api markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.flaky-gamboge-chimpanzee.sh
-        container: qc.doc_surly-scarlet-saola
+        - /usr/bin/env sh .sqa/script.queasy-sepia-rat.sh
+        container: qc.doc_scummy-scarlet-barnacle
       github.com/eosc-synergy/o3api restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.paltry-orchid-crab.sh
-        container: qc.doc_wimpy-crimson-macaque
+        - /usr/bin/env sh .sqa/script.shaky-aqua-kiwi.sh
+        container: qc.doc_gummy-cardinal-oyster
   QC.Lic:
     repos:
       github.com/eosc-synergy/o3api licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.greasy-lavender-flounder.sh
-        container: qc.lic_gloppy-cinnamon-monster
-  QC.Sec:
-    repos:
-      github.com/eosc-synergy/o3api bandit:
-        commands:
-        - /usr/bin/env sh .sqa/script.hasty-tan-hound.sh
-        container: qc.sec_thirsty-red-caiman
-  QC.Sty:
-    repos:
-      github.com/eosc-synergy/o3api flake8:
-        commands:
-        - /usr/bin/env sh .sqa/script.pokey-periwinkle-stingray.sh
-        container: qc.sty_queasy-teal-flamingo
+        - /usr/bin/env sh .sqa/script.hilly-myrtle-hornet.sh
+        container: qc.lic_tacky-burgundy-baboon
 timeout: 600
