@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.1.0
+      branch: 1.3.0-alpha
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/eosc-synergy/o3api:
       repo: https://github.com/eosc-synergy/o3api
@@ -14,26 +14,38 @@ sqa_criteria:
     repos:
       github.com/eosc-synergy/o3api git:
         commands:
-        - /usr/bin/env sh .sqa/script.scaly-sepia-llama.sh
-        container: qc.acc_snippy-cardinal-penguin
+        - /usr/bin/env sh .sqa/script.wheezy-cinnabar-moth.sh
+        container: qc.acc_craggy-seashell-eel
   QC.Doc:
     repos:
       github.com/eosc-synergy/o3api find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.cheeky-turquoise-squirrel.sh
-        container: qc.doc_scanty-denim-mole
+        - /usr/bin/env sh .sqa/script.chewy-mustard-sheepdog.sh
+        container: qc.doc_beady-cardinal-turtle
       github.com/eosc-synergy/o3api markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.queasy-sepia-rat.sh
-        container: qc.doc_scummy-scarlet-barnacle
+        - /usr/bin/env sh .sqa/script.crappy-burgundy-mongoose.sh
+        container: qc.doc_jumpy-lemon-crab
       github.com/eosc-synergy/o3api restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.shaky-aqua-kiwi.sh
-        container: qc.doc_gummy-cardinal-oyster
+        - /usr/bin/env sh .sqa/script.bumpy-brass-serval.sh
+        container: qc.doc_sunny-peach-dog
   QC.Lic:
     repos:
       github.com/eosc-synergy/o3api licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.hilly-myrtle-hornet.sh
-        container: qc.lic_tacky-burgundy-baboon
+        - /usr/bin/env sh .sqa/script.silly-gamboge-hippopotamus.sh
+        container: qc.lic_greasy-smalt-chamois
+  QC.Sec:
+    repos:
+      github.com/eosc-synergy/o3api bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.stuffy-platinum-buffalo.sh
+        container: qc.sec_goopy-amethyst-chinook
+  QC.Sty:
+    repos:
+      github.com/eosc-synergy/o3api flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.muggy-teal-quokka.sh
+        container: qc.sty_dorky-black-binturong
 timeout: 600
