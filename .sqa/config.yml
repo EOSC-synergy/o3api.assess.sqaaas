@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: 1.2.0-alpha
+      branch: 1.3.0-alpha
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/eosc-synergy/o3api:
       repo: https://github.com/eosc-synergy/o3api
@@ -14,38 +14,38 @@ sqa_criteria:
     repos:
       github.com/eosc-synergy/o3api git:
         commands:
-        - /usr/bin/env sh .sqa/script.zippy-cerulean-eleuth.sh
-        container: qc.acc_muggy-magenta-javanese
+        - /usr/bin/env sh .sqa/script.frumpy-scarlet-eagle.sh
+        container: qc.acc_cranky-firebrick-tang
   QC.Doc:
     repos:
       github.com/eosc-synergy/o3api find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.bumpy-olivine-whippet.sh
-        container: qc.doc_seedy-lilac-magpie
+        - /usr/bin/env sh .sqa/script.snappy-smalt-lizard.sh
+        container: qc.doc_cozy-azure-labradoodle
       github.com/eosc-synergy/o3api markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.slimy-seashell-labradoodle.sh
-        container: qc.doc_foggy-firebrick-dragonfly
+        - /usr/bin/env sh .sqa/script.slaphappy-wisteria-oyster.sh
+        container: qc.doc_squirrely-wheat-dane
       github.com/eosc-synergy/o3api restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.skinny-wheat-akita.sh
-        container: qc.doc_sleepy-linen-heron
+        - /usr/bin/env sh .sqa/script.boozy-grey-heron.sh
+        container: qc.doc_tacky-silver-emu
   QC.Lic:
     repos:
       github.com/eosc-synergy/o3api licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.freaky-auburn-cougar.sh
-        container: qc.lic_ready-pear-elephant
+        - /usr/bin/env sh .sqa/script.tacky-seashell-oyster.sh
+        container: qc.lic_sickly-khaki-seal
   QC.Sec:
     repos:
       github.com/eosc-synergy/o3api bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.greasy-purple-snake.sh
-        container: qc.sec_flaky-cerulean-owl
+        - /usr/bin/env sh .sqa/script.silly-chartreuse-macaque.sh
+        container: qc.sec_snappy-chartreuse-newfoundland
   QC.Sty:
     repos:
       github.com/eosc-synergy/o3api flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.cranky-sapphire-penguin.sh
-        container: qc.sty_squeaky-fuchsia-devil
+        - /usr/bin/env sh .sqa/script.seedy-ultramarine-horse.sh
+        container: qc.sty_gimpy-jade-cuttlefish
 timeout: 600
