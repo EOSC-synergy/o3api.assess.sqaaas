@@ -15,54 +15,54 @@ sqa_criteria:
     repos:
       github.com/EOSC-synergy/o3api git:
         commands:
-        - /usr/bin/env sh .sqa/script.sleazy-peach-raccoon.sh
-        container: qc.acc_messy-tomato-tzu
+        - /usr/bin/env sh .sqa/script.woozy-emerald-spitz.sh
+        container: qc.acc_baggy-chestnut-corgi
   QC.Doc:
     repos:
       github.com/EOSC-synergy/o3api find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.ugly-cardinal-owl.sh
-        container: qc.doc_stuffy-cinnamon-rottweiler
+        - /usr/bin/env sh .sqa/script.slimy-magnolia-indri.sh
+        container: qc.doc_scummy-zucchini-bonobo
       github.com/EOSC-synergy/o3api git:
         commands:
-        - /usr/bin/env sh .sqa/script.shabby-purple-duck.sh
-        container: qc.doc_tasty-gold-stingray
+        - /usr/bin/env sh .sqa/script.tasty-puce-snake.sh
+        container: qc.doc_wiggy-bistre-setter
       github.com/EOSC-synergy/o3api markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.skinny-violet-hamster.sh
-        container: qc.doc_queasy-violet-bear
+        - /usr/bin/env sh .sqa/script.shabby-emerald-angora.sh
+        container: qc.doc_cranky-white-slug
       github.com/EOSC-synergy/o3api restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.bumpy-aqua-hyrax.sh
-        container: qc.doc_cloudy-wheat-malamute
+        - /usr/bin/env sh .sqa/script.chewy-khaki-dog.sh
+        container: qc.doc_goopy-lavender-caracal
   QC.FAIR:
     repos:
       github.com/EOSC-synergy/o3api F-UJI:
         commands:
-        - /usr/bin/env sh .sqa/script.smelly-puce-echidna.sh
-        container: qc.fair_slimy-apricot-meerkat
+        - /usr/bin/env sh .sqa/script.hazy-periwinkle-panda.sh
+        container: qc.fair_scanty-dandelion-meerkat
   QC.Lic:
     repos:
       github.com/EOSC-synergy/o3api licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.beady-cream-cow.sh
-        container: qc.lic_beady-turquoise-zebu
+        - /usr/bin/env sh .sqa/script.bumpy-persimmon-crab.sh
+        container: qc.lic_lovely-rust-numbat
   QC.Sec:
     repos:
       github.com/EOSC-synergy/o3api bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.baggy-alizarin-cichlid.sh
-        container: qc.sec_leaky-ochre-gibbon
+        - /usr/bin/env sh .sqa/script.geeky-rose-leopard.sh
+        container: qc.sec_snappy-burgundy-barracuda
   QC.Sty:
     repos:
       github.com/EOSC-synergy/o3api flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.pretty-crimson-lobster.sh
-        container: qc.sty_goopy-taupe-mastiff
+        - /usr/bin/env sh .sqa/script.hilly-cream-newt.sh
+        container: qc.sty_gamy-apricot-zorse
   QC.Ver:
     repos:
       github.com/EOSC-synergy/o3api get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.breezy-ecru-mole.sh
-        container: qc.ver_surly-turquoise-devil
+        - /usr/bin/env sh .sqa/script.fuzzy-malachite-butterfly.sh
+        container: qc.ver_trippy-seashell-labradoodle
 timeout: 1800
