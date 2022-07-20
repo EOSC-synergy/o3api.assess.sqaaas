@@ -1,9 +1,9 @@
 config:
   credentials: []
   project_repos:
-    github.com/EOSC-synergy/o3api:
+    git.scc.kit.edu/synergy.o3as/o3api:
       branch: master
-      repo: https://github.com/EOSC-synergy/o3api
+      repo: https://git.scc.kit.edu/synergy.o3as/o3api
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: 1.7.0_no_kubectl
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
@@ -13,56 +13,56 @@ environment:
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/EOSC-synergy/o3api git:
+      git.scc.kit.edu/synergy.o3as/o3api git:
         commands:
-        - /usr/bin/env sh .sqa/script.flabby-violet-javanese.sh
-        container: qc.acc_skanky-cream-avocet
+        - /usr/bin/env sh .sqa/script.hazy-cerise-monster.sh
+        container: qc.acc_beady-turquoise-saola
   QC.Doc:
     repos:
-      github.com/EOSC-synergy/o3api find_doc_files.py:
+      git.scc.kit.edu/synergy.o3as/o3api find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.gimpy-carmine-bee.sh
-        container: qc.doc_geeky-aqua-cougar
-      github.com/EOSC-synergy/o3api git:
+        - /usr/bin/env sh .sqa/script.cozy-lilac-ragdoll.sh
+        container: qc.doc_sickly-cinnabar-maltese
+      git.scc.kit.edu/synergy.o3as/o3api git:
         commands:
-        - /usr/bin/env sh .sqa/script.wimpy-cinnabar-argentino.sh
-        container: qc.doc_snazzy-saffron-bracke
-      github.com/EOSC-synergy/o3api markdownlint:
+        - /usr/bin/env sh .sqa/script.crappy-tan-wasp.sh
+        container: qc.doc_gamy-chocolate-antelope
+      git.scc.kit.edu/synergy.o3as/o3api markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.sickly-carmine-setter.sh
-        container: qc.doc_cheeky-ruby-goose
-      github.com/EOSC-synergy/o3api restructuredtext-lint:
+        - /usr/bin/env sh .sqa/script.bluesy-malachite-warthog.sh
+        container: qc.doc_gamy-persimmon-okapi
+      git.scc.kit.edu/synergy.o3as/o3api restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.zippy-burgundy-cockroach.sh
-        container: qc.doc_pretty-seashell-ray
+        - /usr/bin/env sh .sqa/script.paltry-puce-vole.sh
+        container: qc.doc_crappy-maroon-squirt
   QC.FAIR:
     repos:
-      github.com/EOSC-synergy/o3api F-UJI:
+      git.scc.kit.edu/synergy.o3as/o3api F-UJI:
         commands:
-        - /usr/bin/env sh .sqa/script.hilly-celadon-barnacle.sh
-        container: qc.fair_flimsy-taupe-cichlid
+        - /usr/bin/env sh .sqa/script.skinny-crimson-falcon.sh
+        container: qc.fair_stuffy-dandelion-blue
   QC.Lic:
     repos:
-      github.com/EOSC-synergy/o3api licensee:
+      git.scc.kit.edu/synergy.o3as/o3api licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.randy-cinnamon-flamingo.sh
-        container: qc.lic_wiggy-lemon-scorpion
+        - /usr/bin/env sh .sqa/script.sleepy-lime-setter.sh
+        container: qc.lic_flabby-wisteria-coral
   QC.Sec:
     repos:
-      github.com/EOSC-synergy/o3api bandit:
+      git.scc.kit.edu/synergy.o3as/o3api bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.gamy-jade-capuchin.sh
-        container: qc.sec_crappy-saffron-mau
+        - /usr/bin/env sh .sqa/script.wimpy-mauve-kakapo.sh
+        container: qc.sec_shabby-auburn-bullfrog
   QC.Sty:
     repos:
-      github.com/EOSC-synergy/o3api flake8:
+      git.scc.kit.edu/synergy.o3as/o3api flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.surly-blue-akbash.sh
-        container: qc.sty_beady-heliotrope-spider
+        - /usr/bin/env sh .sqa/script.droopy-viridian-grasshopper.sh
+        container: qc.sty_wheezy-orchid-hummingbird
   QC.Ver:
     repos:
-      github.com/EOSC-synergy/o3api get_git_tags.py:
+      git.scc.kit.edu/synergy.o3as/o3api get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.freaky-chestnut-orangutan.sh
-        container: qc.ver_snoopy-olivine-panda
+        - /usr/bin/env sh .sqa/script.hazy-lime-chin.sh
+        container: qc.ver_pretty-indigo-cattle
 timeout: 1800
