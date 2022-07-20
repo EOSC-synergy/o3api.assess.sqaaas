@@ -1,4 +1,4 @@
 (
-cd github.com/eosc-synergy/o3api &&
+cd github.com/EOSC-synergy/o3api &&
     rst-lint --level warning --format json .
 )

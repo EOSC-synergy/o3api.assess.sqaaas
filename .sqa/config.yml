@@ -1,68 +1,68 @@
 config:
   credentials: []
   project_repos:
-    github.com/EOSC-synergy/sqaaas-tooling:
-      branch: 1.7.0-only_im_client
-      repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    github.com/eosc-synergy/o3api:
+    github.com/EOSC-synergy/o3api:
       branch: master
-      repo: https://github.com/eosc-synergy/o3api
+      repo: https://github.com/EOSC-synergy/o3api
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: 1.7.0_no_kubectl
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/eosc-synergy/o3api git:
+      github.com/EOSC-synergy/o3api git:
         commands:
-        - /usr/bin/env sh .sqa/script.fuzzy-cerulean-olm.sh
-        container: qc.acc_dorky-grey-tarantula
+        - /usr/bin/env sh .sqa/script.shaky-lavender-russel.sh
+        container: qc.acc_sickly-thistle-albatross
   QC.Doc:
     repos:
-      github.com/eosc-synergy/o3api find_doc_files.py:
+      github.com/EOSC-synergy/o3api find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.freaky-puce-argentino.sh
-        container: qc.doc_stuffy-magnolia-dogfish
-      github.com/eosc-synergy/o3api git:
+        - /usr/bin/env sh .sqa/script.squeaky-taupe-nightingale.sh
+        container: qc.doc_cloudy-blue-cow
+      github.com/EOSC-synergy/o3api git:
         commands:
-        - /usr/bin/env sh .sqa/script.snazzy-xanthic-gar.sh
-        container: qc.doc_pokey-heliotrope-greyhound
-      github.com/eosc-synergy/o3api markdownlint:
+        - /usr/bin/env sh .sqa/script.lovely-khaki-shrimp.sh
+        container: qc.doc_whiny-bistre-terrier
+      github.com/EOSC-synergy/o3api markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.woolly-grey-olm.sh
-        container: qc.doc_woozy-cerise-malamute
-      github.com/eosc-synergy/o3api restructuredtext-lint:
+        - /usr/bin/env sh .sqa/script.leaky-violet-wolverine.sh
+        container: qc.doc_homey-malachite-sparrow
+      github.com/EOSC-synergy/o3api restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.sleepy-firebrick-chameleon.sh
-        container: qc.doc_sickly-cardinal-gibbon
+        - /usr/bin/env sh .sqa/script.squeaky-cinnamon-gibbon.sh
+        container: qc.doc_silly-denim-mammoth
   QC.FAIR:
     repos:
-      github.com/eosc-synergy/o3api F-UJI:
+      github.com/EOSC-synergy/o3api F-UJI:
         commands:
-        - /usr/bin/env sh .sqa/script.woozy-russet-swan.sh
-        container: qc.fair_queasy-brass-hippopotamus
+        - /usr/bin/env sh .sqa/script.clammy-saffron-urchin.sh
+        container: qc.fair_cloudy-cyan-chinook
   QC.Lic:
     repos:
-      github.com/eosc-synergy/o3api licensee:
+      github.com/EOSC-synergy/o3api licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.shabby-emerald-newfoundland.sh
-        container: qc.lic_squeaky-maroon-ocelot
+        - /usr/bin/env sh .sqa/script.zippy-seashell-forest.sh
+        container: qc.lic_slaphappy-ivory-jellyfish
   QC.Sec:
     repos:
-      github.com/eosc-synergy/o3api bandit:
+      github.com/EOSC-synergy/o3api bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.lovely-ecru-spoonbill.sh
-        container: qc.sec_grumpy-russet-gecko
+        - /usr/bin/env sh .sqa/script.ready-red-tang.sh
+        container: qc.sec_sloppy-brass-peccary
   QC.Sty:
     repos:
-      github.com/eosc-synergy/o3api flake8:
+      github.com/EOSC-synergy/o3api flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.nippy-cyan-cat.sh
-        container: qc.sty_paltry-blue-dragon
+        - /usr/bin/env sh .sqa/script.stinky-bronze-barracuda.sh
+        container: qc.sty_scanty-lime-ladybird
   QC.Ver:
     repos:
-      github.com/eosc-synergy/o3api get_git_tags.py:
+      github.com/EOSC-synergy/o3api get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.randy-chartreuse-fowl.sh
-        container: qc.ver_ugly-indigo-owl
+        - /usr/bin/env sh .sqa/script.sleepy-zucchini-dane.sh
+        container: qc.ver_jumpy-smalt-leopard
 timeout: 1800
