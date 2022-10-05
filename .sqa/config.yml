@@ -5,7 +5,7 @@ config:
       branch: master
       repo: https://git.scc.kit.edu/synergy.o3as/o3api
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.0
+      branch: 1.7.0_no_kubectl
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
 environment:
   JPL_DOCKERFORCEBUILD: enabled
@@ -15,48 +15,48 @@ sqa_criteria:
     repos:
       git.scc.kit.edu/synergy.o3as/o3api git:
         commands:
-        - /usr/bin/env sh .sqa/script.jumpy-pink-neanderthal.sh
-        container: qc.acc_gimpy-magenta-bobcat
+        - /usr/bin/env sh .sqa/script.squirrely-lavender-kakapo.sh
+        container: qc.acc_crappy-auburn-lynx
   QC.Doc:
     repos:
       git.scc.kit.edu/synergy.o3as/o3api find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.skanky-flax-maltese.sh
-        container: qc.doc_sloppy-silver-mouse
+        - /usr/bin/env sh .sqa/script.ugly-crimson-dachshund.sh
+        container: qc.doc_snippy-corn-budgerigar
       git.scc.kit.edu/synergy.o3as/o3api git:
         commands:
-        - /usr/bin/env sh .sqa/script.cloudy-burgundy-clam.sh
-        container: qc.doc_pasty-rose-mole
+        - /usr/bin/env sh .sqa/script.scaly-taupe-hare.sh
+        container: qc.doc_nerdy-coral-tarsier
       git.scc.kit.edu/synergy.o3as/o3api markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.tacky-eggplant-warthog.sh
-        container: qc.doc_nippy-indigo-barb
+        - /usr/bin/env sh .sqa/script.muggy-zucchini-corgi.sh
+        container: qc.doc_woolly-gold-mastiff
       git.scc.kit.edu/synergy.o3as/o3api restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.whiny-pumpkin-beaver.sh
-        container: qc.doc_lovely-pink-budgerigar
+        - /usr/bin/env sh .sqa/script.greasy-thistle-uguisu.sh
+        container: qc.doc_bumpy-emerald-sheep
   QC.Lic:
     repos:
       git.scc.kit.edu/synergy.o3as/o3api licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.wiggy-sangria-llama.sh
-        container: qc.lic_shaggy-cornflower-catfish
+        - /usr/bin/env sh .sqa/script.surly-ultramarine-akbash.sh
+        container: qc.lic_jumpy-cerise-donkey
   QC.Sec:
     repos:
       git.scc.kit.edu/synergy.o3as/o3api bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.scanty-pear-quokka.sh
-        container: qc.sec_stinky-maroon-corgi
+        - /usr/bin/env sh .sqa/script.dorky-denim-ferret.sh
+        container: qc.sec_beady-persimmon-kakapo
   QC.Sty:
     repos:
       git.scc.kit.edu/synergy.o3as/o3api flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.blurry-grey-lionfish.sh
-        container: qc.sty_clammy-sepia-earwig
+        - /usr/bin/env sh .sqa/script.scaly-coral-wolf.sh
+        container: qc.sty_muzzy-wisteria-shark
   QC.Ver:
     repos:
       git.scc.kit.edu/synergy.o3as/o3api get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sleazy-cream-bombay.sh
-        container: qc.ver_crabby-sapphire-macaw
+        - /usr/bin/env sh .sqa/script.hazy-magnolia-duck.sh
+        container: qc.ver_homey-tomato-sparrow
 timeout: 1800
