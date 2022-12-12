@@ -5,7 +5,7 @@ config:
       branch: master
       repo: https://git.scc.kit.edu/synergy.o3as/o3api
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.6
+      branch: release/1.7.7
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
 environment:
   JPL_DOCKERFORCEBUILD: enabled
@@ -15,62 +15,66 @@ sqa_criteria:
     repos:
       git.scc.kit.edu/synergy.o3as/o3api git:
         commands:
-        - /usr/bin/env sh .sqa/script.whiny-red-bison.sh
-        container: qc.acc_woolly-cinnamon-woodpecker
+        - /usr/bin/env sh .sqa/script.homey-linen-loon.sh
+        container: qc.acc_bumpy-corn-greyhound
   QC.Doc:
     repos:
       git.scc.kit.edu/synergy.o3as/o3api find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sunny-ultramarine-bat.sh
-        container: qc.doc_cranky-ecru-albatross
+        - /usr/bin/env sh .sqa/script.gummy-smalt-armadillo.sh
+        container: qc.doc_seedy-vermilion-urchin
       git.scc.kit.edu/synergy.o3as/o3api git:
         commands:
-        - /usr/bin/env sh .sqa/script.skinny-sepia-raccoon.sh
-        container: qc.doc_scanty-heliotrope-worm
+        - /usr/bin/env sh .sqa/script.foggy-tangerine-wolfhound.sh
+        container: qc.doc_slaphappy-chartreuse-spitz
       git.scc.kit.edu/synergy.o3as/o3api markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.ready-cinnabar-hyena.sh
-        container: qc.doc_seedy-lime-urchin
+        - /usr/bin/env sh .sqa/script.pretty-coral-squirt.sh
+        container: qc.doc_sleepy-amethyst-orangutan
       git.scc.kit.edu/synergy.o3as/o3api restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.homey-xanthic-serval.sh
-        container: qc.doc_crabby-russet-bee
+        - /usr/bin/env sh .sqa/script.trippy-wisteria-moorhen.sh
+        container: qc.doc_gummy-jade-zorse
   QC.Lic:
     repos:
       git.scc.kit.edu/synergy.o3as/o3api licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.stealthy-lavender-bombay.sh
-        container: qc.lic_sleepy-olivine-goose
+        - /usr/bin/env sh .sqa/script.muzzy-ivory-shark.sh
+        container: qc.lic_muzzy-smalt-raccoon
   QC.Met:
     repos:
+      git.scc.kit.edu/synergy.o3as/o3api cff-converter-python:
+        commands:
+        - /usr/bin/env sh .sqa/script.muggy-dandelion-mongoose.sh
+        container: qc.met_blurry-aqua-millipede
       git.scc.kit.edu/synergy.o3as/o3api validate_codemeta:
         commands:
-        - /usr/bin/env sh .sqa/script.gamy-carmine-tuatara.sh
-        container: qc.met_bumpy-denim-donkey
+        - /usr/bin/env sh .sqa/script.homey-sapphire-kangaroo.sh
+        container: qc.met_skinny-buff-owl
   QC.Sec:
     repos:
       git.scc.kit.edu/synergy.o3as/o3api bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.snippy-pear-chinchilla.sh
-        container: qc.sec_cranky-tomato-dunker
+        - /usr/bin/env sh .sqa/script.gimpy-blue-rat.sh
+        container: qc.sec_leaky-burgundy-lion
   QC.Sty:
     repos:
       git.scc.kit.edu/synergy.o3as/o3api flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.cranky-bistre-burmese.sh
-        container: qc.sty_squeaky-crimson-wolverine
+        - /usr/bin/env sh .sqa/script.zippy-scarlet-coyote.sh
+        container: qc.sty_cozy-ultramarine-cat
       git.scc.kit.edu/synergy.o3as/o3api hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.pokey-wisteria-wallaby.sh
-        container: qc.sty_chewy-apricot-gibbon
+        - /usr/bin/env sh .sqa/script.tasty-scarlet-capuchin.sh
+        container: qc.sty_ready-lavender-ocelot
       git.scc.kit.edu/synergy.o3as/o3api jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.skinny-chocolate-cuscus.sh
-        container: qc.sty_sleepy-crimson-harrier
+        - /usr/bin/env sh .sqa/script.surly-pink-quoll.sh
+        container: qc.sty_scummy-amethyst-binturong
   QC.Ver:
     repos:
       git.scc.kit.edu/synergy.o3as/o3api get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.chewy-khaki-bird.sh
-        container: qc.ver_jumpy-malachite-fousek
-timeout: 1800
+        - /usr/bin/env sh .sqa/script.muzzy-bistre-donkey.sh
+        container: qc.ver_snippy-red-mandrill
+timeout: 5400
