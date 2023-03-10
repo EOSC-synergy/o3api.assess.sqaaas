@@ -5,7 +5,7 @@ config:
       branch: master
       repo: https://github.com/EOSC-synergy/o3api
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.7
+      branch: release/1.7.8
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
 environment:
   JPL_DOCKERFORCEBUILD: enabled
@@ -15,66 +15,66 @@ sqa_criteria:
     repos:
       github.com/EOSC-synergy/o3api git:
         commands:
-        - /usr/bin/env sh .sqa/script.scaly-apricot-devil.sh
-        container: qc.acc_dorky-cinnabar-goose
+        - /usr/bin/env sh .sqa/script.snippy-lilac-iguana.sh
+        container: qc.acc_droopy-periwinkle-millipede
   QC.Doc:
     repos:
       github.com/EOSC-synergy/o3api find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.snoopy-cinnamon-caterpillar.sh
-        container: qc.doc_breezy-viridian-centipede
+        - /usr/bin/env sh .sqa/script.pasty-teal-saola.sh
+        container: qc.doc_lovely-platinum-akita
       github.com/EOSC-synergy/o3api git:
         commands:
-        - /usr/bin/env sh .sqa/script.messy-rose-warthog.sh
-        container: qc.doc_wheezy-crimson-kakapo
+        - /usr/bin/env sh .sqa/script.gamy-lemon-wolverine.sh
+        container: qc.doc_shaky-cerulean-mammoth
       github.com/EOSC-synergy/o3api markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.shabby-chocolate-saola.sh
-        container: qc.doc_chummy-russet-bandicoot
+        - /usr/bin/env sh .sqa/script.shabby-apricot-kiwi.sh
+        container: qc.doc_flimsy-grey-kiwi
       github.com/EOSC-synergy/o3api restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.stealthy-cardinal-eleuth.sh
-        container: qc.doc_whiny-ochre-crocodile
+        - /usr/bin/env sh .sqa/script.wimpy-razzmatazz-maltese.sh
+        container: qc.doc_skanky-green-rottweiler
   QC.Lic:
     repos:
       github.com/EOSC-synergy/o3api licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.craggy-chocolate-squirt.sh
-        container: qc.lic_silly-blue-beetle
+        - /usr/bin/env sh .sqa/script.greasy-cream-gopher.sh
+        container: qc.lic_homely-seashell-dragonfly
   QC.Met:
     repos:
       github.com/EOSC-synergy/o3api cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.flabby-cerise-quetzal.sh
-        container: qc.met_gloppy-malachite-chicken
+        - /usr/bin/env sh .sqa/script.slimy-firebrick-wombat.sh
+        container: qc.met_fuzzy-razzmatazz-zebra
       github.com/EOSC-synergy/o3api validate_codemeta:
         commands:
-        - /usr/bin/env sh .sqa/script.greasy-amber-squid.sh
-        container: qc.met_flaky-fuchsia-chinchilla
+        - /usr/bin/env sh .sqa/script.crabby-cyan-walrus.sh
+        container: qc.met_muggy-mauve-ocelot
   QC.Sec:
     repos:
       github.com/EOSC-synergy/o3api bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.silly-wisteria-wolverine.sh
-        container: qc.sec_woozy-goldenrod-bonobo
+        - /usr/bin/env sh .sqa/script.wheezy-magenta-anteater.sh
+        container: qc.sec_shaggy-indigo-barnacle
   QC.Sty:
     repos:
       github.com/EOSC-synergy/o3api flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.greasy-cinnamon-gibbon.sh
-        container: qc.sty_sleepy-sangria-yak
+        - /usr/bin/env sh .sqa/script.sickly-ruby-saola.sh
+        container: qc.sty_wiggy-cerise-capybara
       github.com/EOSC-synergy/o3api hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.pretty-platinum-maltese.sh
-        container: qc.sty_chewy-charcoal-liger
+        - /usr/bin/env sh .sqa/script.cozy-scarlet-hyena.sh
+        container: qc.sty_surly-cyan-woodpecker
       github.com/EOSC-synergy/o3api jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.paltry-black-forest.sh
-        container: qc.sty_woolly-rust-husky
+        - /usr/bin/env sh .sqa/script.crappy-khaki-ant.sh
+        container: qc.sty_flaky-chestnut-quail
   QC.Ver:
     repos:
       github.com/EOSC-synergy/o3api get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.hilly-brass-maltese.sh
-        container: qc.ver_hilly-sepia-frigatebird
+        - /usr/bin/env sh .sqa/script.homey-plum-wolverine.sh
+        container: qc.ver_cloudy-purple-blue
 timeout: 5400
