@@ -5,7 +5,7 @@ config:
       branch: master
       repo: https://github.com/EOSC-synergy/o3api
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.8
+      branch: release/2.0.0
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
 environment:
   JPL_DOCKERFORCEBUILD: enabled
@@ -15,66 +15,28 @@ sqa_criteria:
     repos:
       github.com/EOSC-synergy/o3api git:
         commands:
-        - /usr/bin/env sh .sqa/script.snippy-lilac-iguana.sh
-        container: qc.acc_droopy-periwinkle-millipede
+        - /usr/bin/env sh .sqa/script.cranky-carmine-hummingbird.sh
+        container: qc.acc_hasty-corn-hippopotamus
   QC.Doc:
     repos:
       github.com/EOSC-synergy/o3api find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.pasty-teal-saola.sh
-        container: qc.doc_lovely-platinum-akita
+        - /usr/bin/env sh .sqa/script.silly-platinum-sponge.sh
+        container: qc.doc_sunny-sepia-tzu
       github.com/EOSC-synergy/o3api git:
         commands:
-        - /usr/bin/env sh .sqa/script.gamy-lemon-wolverine.sh
-        container: qc.doc_shaky-cerulean-mammoth
-      github.com/EOSC-synergy/o3api markdownlint:
-        commands:
-        - /usr/bin/env sh .sqa/script.shabby-apricot-kiwi.sh
-        container: qc.doc_flimsy-grey-kiwi
-      github.com/EOSC-synergy/o3api restructuredtext-lint:
-        commands:
-        - /usr/bin/env sh .sqa/script.wimpy-razzmatazz-maltese.sh
-        container: qc.doc_skanky-green-rottweiler
+        - /usr/bin/env sh .sqa/script.greasy-persimmon-dolphin.sh
+        container: qc.doc_shabby-wheat-spitz
   QC.Lic:
     repos:
       github.com/EOSC-synergy/o3api licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.greasy-cream-gopher.sh
-        container: qc.lic_homely-seashell-dragonfly
-  QC.Met:
-    repos:
-      github.com/EOSC-synergy/o3api cff-converter-python:
-        commands:
-        - /usr/bin/env sh .sqa/script.slimy-firebrick-wombat.sh
-        container: qc.met_fuzzy-razzmatazz-zebra
-      github.com/EOSC-synergy/o3api validate_codemeta:
-        commands:
-        - /usr/bin/env sh .sqa/script.crabby-cyan-walrus.sh
-        container: qc.met_muggy-mauve-ocelot
-  QC.Sec:
-    repos:
-      github.com/EOSC-synergy/o3api bandit:
-        commands:
-        - /usr/bin/env sh .sqa/script.wheezy-magenta-anteater.sh
-        container: qc.sec_shaggy-indigo-barnacle
-  QC.Sty:
-    repos:
-      github.com/EOSC-synergy/o3api flake8:
-        commands:
-        - /usr/bin/env sh .sqa/script.sickly-ruby-saola.sh
-        container: qc.sty_wiggy-cerise-capybara
-      github.com/EOSC-synergy/o3api hadolint:
-        commands:
-        - /usr/bin/env sh .sqa/script.cozy-scarlet-hyena.sh
-        container: qc.sty_surly-cyan-woodpecker
-      github.com/EOSC-synergy/o3api jsonlint:
-        commands:
-        - /usr/bin/env sh .sqa/script.crappy-khaki-ant.sh
-        container: qc.sty_flaky-chestnut-quail
+        - /usr/bin/env sh .sqa/script.geeky-harlequin-walrus.sh
+        container: qc.lic_blurry-yellow-duck
   QC.Ver:
     repos:
       github.com/EOSC-synergy/o3api get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.homey-plum-wolverine.sh
-        container: qc.ver_cloudy-purple-blue
+        - /usr/bin/env sh .sqa/script.hazy-sepia-badger.sh
+        container: qc.ver_pretty-khaki-chicken
 timeout: 5400
