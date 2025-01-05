@@ -1,6 +1,6 @@
 {
     "meta": {
-        "version": "3.0.0",
+        "version": "3.2.1",
         "report_json_url": "https://raw.githubusercontent.com/eosc-synergy/o3api.assess.sqaaas/master/.report/assessment_output.json"
     },
     "repository": [
@@ -35,7 +35,7 @@
                             "message": "Source code uses Git for version control",
                             "plugin": {
                                 "name": "report2sqaaas-plugin-boolean",
-                                "version": "1.2.0"
+                                "version": "2.1.0"
                             },
                             "tool": {
                                 "name": "git",
@@ -87,7 +87,7 @@
                             "message": "A README file is present in the code repository",
                             "plugin": {
                                 "name": "report2sqaaas-plugin-find_doc_files",
-                                "version": "1.2.0"
+                                "version": "2.1.0"
                             },
                             "tool": {
                                 "name": "find_doc_files.py",
@@ -148,7 +148,7 @@
                             "message": "A CODE_OF_CONDUCT file is present in the code repository",
                             "plugin": {
                                 "name": "report2sqaaas-plugin-find_doc_files",
-                                "version": "1.2.0"
+                                "version": "2.1.0"
                             },
                             "tool": {
                                 "name": "find_doc_files.py",
@@ -209,7 +209,7 @@
                             "message": "A CONTRIBUTING file is present in the code repository",
                             "plugin": {
                                 "name": "report2sqaaas-plugin-find_doc_files",
-                                "version": "1.2.0"
+                                "version": "2.1.0"
                             },
                             "tool": {
                                 "name": "find_doc_files.py",
@@ -270,7 +270,7 @@
                             "message": "Documentation resides in the same repository as code",
                             "plugin": {
                                 "name": "report2sqaaas-plugin-boolean",
-                                "version": "1.2.0"
+                                "version": "2.1.0"
                             },
                             "tool": {
                                 "name": "git",
@@ -319,7 +319,7 @@
                             "message": "An Open Source license found in the code repository: GPL-3.0",
                             "plugin": {
                                 "name": "report2sqaaas-plugin-licensee",
-                                "version": "1.2.0"
+                                "version": "2.1.0"
                             },
                             "tool": {
                                 "name": "licensee",
@@ -478,7 +478,7 @@
                             "message": "LICENSE file is visible at the root path of the code repository: LICENSE",
                             "plugin": {
                                 "name": "report2sqaaas-plugin-licensee",
-                                "version": "1.2.0"
+                                "version": "2.1.0"
                             },
                             "tool": {
                                 "name": "licensee",
@@ -637,7 +637,7 @@
                             "message": "License GPL-3.0 is approved by the Open Source Initiative",
                             "plugin": {
                                 "name": "report2sqaaas-plugin-licensee",
-                                "version": "1.2.0"
+                                "version": "2.1.0"
                             },
                             "tool": {
                                 "name": "licensee",
@@ -796,7 +796,7 @@
                             "message": "License GPL-3.0 is listed under the Open Source Initiative popular category",
                             "plugin": {
                                 "name": "report2sqaaas-plugin-licensee",
-                                "version": "1.2.0"
+                                "version": "2.1.0"
                             },
                             "tool": {
                                 "name": "licensee",
@@ -965,7 +965,7 @@
                             "message": "The code repository uses tags for releasing new software versions",
                             "plugin": {
                                 "name": "report2sqaaas-plugin-is_semver",
-                                "version": "1.0.0"
+                                "version": "2.1.0"
                             },
                             "tool": {
                                 "name": "get_git_tags.py",
@@ -1028,7 +1028,7 @@
                             "message": "Latest release tag 0.8.7-pre is SemVer compliant",
                             "plugin": {
                                 "name": "report2sqaaas-plugin-is_semver",
-                                "version": "1.0.0"
+                                "version": "2.1.0"
                             },
                             "tool": {
                                 "name": "get_git_tags.py",
@@ -1091,7 +1091,7 @@
                             "message": "Not all release tags are SemVer compliant",
                             "plugin": {
                                 "name": "report2sqaaas-plugin-is_semver",
-                                "version": "1.0.0"
+                                "version": "2.1.0"
                             },
                             "tool": {
                                 "name": "get_git_tags.py",
@@ -1246,45 +1246,45 @@
             "criteria": {
                 "bronze": {
                     "to_fulfill": [
-                        "QC.Doc",
                         "QC.Acc",
-                        "QC.Lic"
+                        "QC.Lic",
+                        "QC.Doc"
                     ],
                     "missing": [],
                     "fulfilled": [
-                        "QC.Doc",
                         "QC.Acc",
-                        "QC.Lic"
+                        "QC.Lic",
+                        "QC.Doc"
                     ]
                 },
                 "silver": {
                     "to_fulfill": [
                         "QC.Acc",
-                        "QC.Doc",
                         "QC.Lic",
+                        "QC.Ver",
                         "QC.Met",
-                        "QC.Ver"
+                        "QC.Doc"
                     ],
                     "missing": [
                         "QC.Met"
                     ],
                     "fulfilled": [
-                        "QC.Ver",
-                        "QC.Doc",
                         "QC.Acc",
-                        "QC.Lic"
+                        "QC.Ver",
+                        "QC.Lic",
+                        "QC.Doc"
                     ]
                 },
                 "gold": {
                     "to_fulfill": [
-                        "QC.Sec",
                         "QC.Acc",
-                        "QC.Doc",
-                        "QC.Sty",
+                        "QC.Sec",
                         "QC.Uni",
                         "QC.Lic",
+                        "QC.Ver",
+                        "QC.Sty",
                         "QC.Met",
-                        "QC.Ver"
+                        "QC.Doc"
                     ],
                     "missing": [
                         "QC.Sec",
@@ -1293,32 +1293,32 @@
                         "QC.Met"
                     ],
                     "fulfilled": [
-                        "QC.Ver",
-                        "QC.Doc",
                         "QC.Acc",
-                        "QC.Lic"
+                        "QC.Ver",
+                        "QC.Lic",
+                        "QC.Doc"
                     ]
                 }
             },
             "data": {
                 "entityType": "Assertion",
-                "entityId": "6X50OpD1SXGkDUNLsW00kw",
-                "openBadgeId": "https://api.eu.badgr.io/public/assertions/6X50OpD1SXGkDUNLsW00kw",
-                "createdAt": "2024-02-22T08:17:38.610737344Z",
+                "entityId": "mnllNiqQSjSkE4fI_0MKew",
+                "openBadgeId": "https://api.eu.badgr.io/public/assertions/mnllNiqQSjSkE4fI_0MKew",
+                "createdAt": "2025-01-05T21:37:48.495967050Z",
                 "createdBy": "aS1lWKgIR4u8bGjPZUzAyg",
                 "badgeclass": "UOmgyH_TSpSPXiro4aNBoQ",
                 "badgeclassOpenBadgeId": "https://api.eu.badgr.io/public/badges/UOmgyH_TSpSPXiro4aNBoQ",
                 "issuer": "aS1lWKgIR4u8bGjPZUzAyg",
                 "issuerOpenBadgeId": "https://api.eu.badgr.io/public/issuers/aS1lWKgIR4u8bGjPZUzAyg",
-                "image": "https://api.eu.badgr.io/public/assertions/6X50OpD1SXGkDUNLsW00kw/image",
+                "image": "https://api.eu.badgr.io/public/assertions/mnllNiqQSjSkE4fI_0MKew/image",
                 "recipient": {
-                    "identity": "sha256$757d4234b5d5444a1f47c596a2cb65112e606a489571c6f3262556c7e5a7263f",
+                    "identity": "sha256$ba9f3e4fe87dc42655f6f6682d57f3b93ae0cea31177388aa72b3842d79990d6",
                     "hashed": true,
                     "type": "url",
-                    "salt": "IYmBdEj6bCIqffl6",
+                    "salt": "IYVeYW16MvFDt3yI",
                     "plaintextIdentity": "https://github.com/EOSC-synergy/o3api"
                 },
-                "issuedOn": "2024-02-22T08:17:38.610741983Z",
+                "issuedOn": "2025-01-05T21:37:48.495969188Z",
                 "narrative": "SQAaaS assessment results for repository https://github.com/EOSC-synergy/o3api (commit: 1d470d06b18cc4b75bf589c66c33db5cb420dc30, branch/tag: master)",
                 "evidence": [
                     {
@@ -1336,7 +1336,7 @@
                 "expires": null,
                 "extensions": {},
                 "assertionRef": {
-                    "assertionUrl": "https://api.eu.badgr.io/public/assertions/6X50OpD1SXGkDUNLsW00kw"
+                    "assertionUrl": "https://api.eu.badgr.io/public/assertions/mnllNiqQSjSkE4fI_0MKew"
                 },
                 "badgeRef": {
                     "badgeUrl": "https://api.eu.badgr.io/public/badges/UOmgyH_TSpSPXiro4aNBoQ"
@@ -1348,10 +1348,10 @@
                 "source": "local",
                 "sourceUrl": null,
                 "originalJson": null,
-                "imagePath": "uploads/badges/assertion-6X50OpD1SXGkDUNLsW00kw.png"
+                "imagePath": "uploads/badges/assertion-mnllNiqQSjSkE4fI_0MKew.png"
             },
-            "share": "<!--\nSPDX-FileCopyrightText: Copyright contributors to the Software Quality Assurance as a Service (SQAaaS) project <sqaaas@ibergrid.eu>\nSPDX-FileContributor: Pablo Orviz <orviz@ifca.unican.es>\n\nSPDX-License-Identifier: GPL-3.0-only\n-->\n\n<blockquote class=\"badgr-badge\" style=\"font-family: Helvetica, Roboto, &quot;Segoe UI&quot;, Calibri, sans-serif;\"><a href=\"https://api.eu.badgr.io/public/assertions/6X50OpD1SXGkDUNLsW00kw?identity__url=https%3A//github.com/EOSC-synergy/o3api.assess.sqaaas/commit/dcc7e050630a830b6356b123af1fce101ddd33ff\"><img width=\"120px\" height=\"120px\" src=\"https://api.eu.badgr.io/public/assertions/6X50OpD1SXGkDUNLsW00kw/image\"></a><script async=\"async\" src=\"https://eu.badgr.com/assets/widgets.bundle.js\"></script></blockquote>",
-            "verification_url": "https://badgecheck.io/?url=https%3A%2F%2Fapi.eu.badgr.io%2Fpublic%2Fassertions%2F6X50OpD1SXGkDUNLsW00kw?identity__url=https%3A%2F%2Fgithub.com%2FEOSC-synergy%2Fo3api.assess.sqaaas%2Fcommit%2Fdcc7e050630a830b6356b123af1fce101ddd33ff&amp;identity__url=https%3A%2F%2Fgithub.com%2FEOSC-synergy%2Fo3api.assess.sqaaas%2Fcommit%2Fdcc7e050630a830b6356b123af1fce101ddd33ff"
+            "share": "<!--\nSPDX-FileCopyrightText: Copyright contributors to the Software Quality Assurance as a Service (SQAaaS) project <sqaaas@ibergrid.eu>\nSPDX-FileContributor: Pablo Orviz <orviz@ifca.unican.es>\n\nSPDX-License-Identifier: GPL-3.0-only\n-->\n\n<blockquote class=\"badgr-badge\" style=\"font-family: Helvetica, Roboto, &quot;Segoe UI&quot;, Calibri, sans-serif;\"><a href=\"https://api.eu.badgr.io/public/assertions/mnllNiqQSjSkE4fI_0MKew?identity__url=https%3A//github.com/EOSC-synergy/o3api.assess.sqaaas/commit/dcc7e050630a830b6356b123af1fce101ddd33ff\"><img width=\"120px\" height=\"120px\" src=\"https://api.eu.badgr.io/public/assertions/mnllNiqQSjSkE4fI_0MKew/image\"></a><script async=\"async\" src=\"https://eu.badgr.com/assets/widgets.bundle.js\"></script></blockquote>",
+            "verification_url": "https://badgecheck.io/?url=https%3A%2F%2Fapi.eu.badgr.io%2Fpublic%2Fassertions%2FmnllNiqQSjSkE4fI_0MKew?identity__url=https%3A%2F%2Fgithub.com%2FEOSC-synergy%2Fo3api.assess.sqaaas%2Fcommit%2Fdcc7e050630a830b6356b123af1fce101ddd33ff&amp;identity__url=https%3A%2F%2Fgithub.com%2FEOSC-synergy%2Fo3api.assess.sqaaas%2Fcommit%2Fdcc7e050630a830b6356b123af1fce101ddd33ff"
         }
     }
 }
